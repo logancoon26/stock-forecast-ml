@@ -122,12 +122,12 @@ The Transformer model is deployed as a REST API on AWS EC2. Enter a stock ticker
 
 **Base URL:**
 ```
-http://<ec2-public-ip>:8000
+http://3.14.205.21/
 ```
 
 **API Docs (Swagger UI):**
 ```
-http://<ec2-public-ip>:8000/docs
+http://3.14.205.21/docs
 ```
 
 ### Example Request
