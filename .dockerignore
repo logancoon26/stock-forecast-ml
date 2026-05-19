@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+mlruns/
+!mlruns/0/
+!mlruns/0/models/
+!mlruns/0/models/m-c61919e6542a407583c9b888db098d58/
+!mlruns/0/meta.yaml
+
+
+.vscode/
+.idea/
+*.code-workspace

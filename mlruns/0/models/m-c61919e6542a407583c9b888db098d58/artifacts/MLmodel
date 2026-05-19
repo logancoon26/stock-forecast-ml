@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/logan/PycharmProjects/PsychicLamp/psychic-lamp/mlruns/0/models/m-c61919e6542a407583c9b888db098d58/artifacts
+flavors:
+  python_function:
+    config:
+      device: null
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pytorch
+    pickle_module_name: mlflow.pytorch.pickle_module
+    python_version: 3.9.13
+  pytorch:
+    code: null
+    model_data: data
+    pytorch_version: 2.5.1+cu121
+mlflow_version: 3.1.4
+model_id: m-c61919e6542a407583c9b888db098d58
+model_size_bytes: 315789
+model_uuid: m-c61919e6542a407583c9b888db098d58
+prompts: null
+run_id: 9374fbbd79154a4ab40be892c31d1526
+utc_time_created: '2026-05-13 02:50:34.648428'

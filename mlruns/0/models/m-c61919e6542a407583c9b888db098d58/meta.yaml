@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/logan/PycharmProjects/PsychicLamp/psychic-lamp/mlruns/0/models/m-c61919e6542a407583c9b888db098d58/artifacts
+creation_timestamp: 1778640634560
+experiment_id: '0'
+last_updated_timestamp: 1778640643330
+model_id: m-c61919e6542a407583c9b888db098d58
+model_type: null
+name: model
+source_run_id: 9374fbbd79154a4ab40be892c31d1526
+status: 2
+status_message: null

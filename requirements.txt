@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+numpy
+torch
+yfinance
+matplotlib
+pandas
+scikit-learn
+mlflow
+xgboost
+pydantic
