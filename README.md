@@ -118,7 +118,7 @@ This will load the trained model and run inference on new data, outputting a buy
 
 ## Accessing the Deployed Transformer Model
 
-The Transformer model is deployed as a REST API on AWS EC2. Enter a stock ticker, and the "next-day" price will be predicted. Note that for ease of use, the "next-day" is January 2nd, 2026.
+The Transformer model is deployed as a REST API on AWS EC2. Enter a stock ticker, and the next-day price will be predicted.
 
 **Base URL:**
 ```
