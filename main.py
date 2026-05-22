@@ -151,7 +151,7 @@ def predict(request: PredictRequest):
     """
     Predict next-day price direction for a given ticker.
 
-    Returns probability of UP move and a HIGH/MEDIUM/LOW confidence rating.
+    Returns probability of UP move.
     """
     if state.model is None:
         raise HTTPException(status_code=503, detail="Model not loaded — check /health")
@@ -211,15 +211,6 @@ def predict(request: PredictRequest):
         avg_prob   = float(prob[-1])
         prediction = "UP" if avg_prob >= 0.5 else "DOWN"
 
-        # Confidence based on distance from 0.5
-        distance = abs(avg_prob - 0.5)
-        if distance >= 0.15:
-            confidence = "High"
-        elif distance >= 0.08:
-            confidence = "Medium"
-        else:
-            confidence = "Low"
-
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Inference failed: {e}")
 
@@ -227,6 +218,5 @@ def predict(request: PredictRequest):
         ticker       = request.ticker.upper(),
         prediction   = prediction,
         probability  = round(avg_prob, 4),
-        confidence   = confidence,
         predicted_at = datetime.utcnow().isoformat(),
     )
