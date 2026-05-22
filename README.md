@@ -122,30 +122,12 @@ The Transformer model is deployed as a REST API on AWS EC2. Enter a stock ticker
 
 **Base URL:**
 ```
-http://3.14.205.21/
+http://18.216.184.144/
 ```
 
 **API Docs (Swagger UI):**
 ```
-http://3.14.205.21/docs
-```
-
-### Example Request
-
-```bash
-curl -X POST http://<ec2-public-ip>:8000/predict \
-  -H "Content-Type: application/json" \
-  -d '{"ticker": "AAPL"}'
-```
-
-### Example Response
-
-```json
-{
-  "ticker": "AAPL",
-  "prediction": "buy",
-  "probability": 0.73
-}
+http://18.216.184.144/docs
 ```
 
 ---
