@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/logan/PycharmProjects/stockforecast/stock-forecast-ml/mlruns/0/models/m-c84f4f5e4f284023a60a916ba65dbf51/artifacts
+creation_timestamp: 1779677780257
+experiment_id: '0'
+last_updated_timestamp: 1779677787375
+model_id: m-c84f4f5e4f284023a60a916ba65dbf51
+model_type: null
+name: model
+source_run_id: 5c749c715a4548f0aa9925c71ff49bb9
+status: 2
+status_message: null

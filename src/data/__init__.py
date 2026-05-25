@@ -1,6 +1,7 @@
 from .loader import load_data, train_val_test_split_by_date
 from .preprocessing import preprocess
 import pandas as pd
+import joblib
  
  
 def get_data(
@@ -61,6 +62,9 @@ def get_data(
         signals_train, X_train, y_class_train, y_reg_train, feat_scaler = preprocess(
             prices_train, feats_train, df_train, window_size
         )
+
+        # Save scaler for inference
+        joblib.dump(feat_scaler, "feat_scaler.pkl")
 
         # Preprocess val — reuses train scalers 
         signals_val, X_val, y_class_val, y_reg_val, _ = preprocess(
@@ -125,7 +129,8 @@ def get_inference_data(
     start: str,
     end: str,
     feature_fn,
-    window_size: int = 20
+    window_size: int = 20,
+    scaler_path = "mlruns/0/models/m-2625090976b0414692913fddd8e752a9/feat_scaler.pkl"
 ) -> pd.DataFrame:
     """
     Simplified data pipeline for inference — no train/val/test split.
@@ -146,8 +151,10 @@ def get_inference_data(
     prices = df["Close"].to_numpy().flatten()
     feats  = feature_fn(prices, window=window_size)
 
+    print(scaler_path)
+    feat_scaler_in = joblib.load(scaler_path)
     signals, X, y_class, y_reg, _ = preprocess(
-        prices, feats, df, window_size
+        prices, feats, df, window_size, feat_scaler=feat_scaler_in
     )
 
     print("feats length:", len(feats))

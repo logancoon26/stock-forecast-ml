@@ -28,7 +28,7 @@ from src.data.features import return_all_features, make_transformer_sequences
 
 mlflow.set_tracking_uri("file:///app/mlruns")
 
-MLFLOW_RUN_ID = "c61919e6542a407583c9b888db098d58"
+MLFLOW_RUN_ID = "c84f4f5e4f284023a60a916ba65dbf51"
 MODEL_URI = f"mlruns/0/models/m-{MLFLOW_RUN_ID}/artifacts"
 WINDOW_SIZE     = int(os.getenv("WINDOW_SIZE",  "20"))
 SEQ_LEN         = int(os.getenv("SEQ_LEN",      "30"))
@@ -163,7 +163,8 @@ def predict(request: PredictRequest):
             ticker         = request.ticker,
             start           = "2025-01-01",
             end             = today,
-            feature_fn      = return_all_features
+            feature_fn      = return_all_features,
+            scaler_path = f"mlruns/0/models/m-{MLFLOW_RUN_ID}/feat_scaler.pkl"
         )
     except Exception as e:
         import traceback

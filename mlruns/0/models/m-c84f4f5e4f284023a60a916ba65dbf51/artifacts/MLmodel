@@ -1,4 +1,4 @@
-artifact_path: file:///C:/Users/logan/PycharmProjects/PsychicLamp/psychic-lamp/mlruns/0/models/m-c61919e6542a407583c9b888db098d58/artifacts
+artifact_path: file:///C:/Users/logan/PycharmProjects/stockforecast/stock-forecast-ml/mlruns/0/models/m-c84f4f5e4f284023a60a916ba65dbf51/artifacts
 flavors:
   python_function:
     config:
@@ -15,9 +15,9 @@ flavors:
     model_data: data
     pytorch_version: 2.5.1+cu121
 mlflow_version: 3.1.4
-model_id: m-c61919e6542a407583c9b888db098d58
+model_id: m-c84f4f5e4f284023a60a916ba65dbf51
 model_size_bytes: 315789
-model_uuid: m-c61919e6542a407583c9b888db098d58
+model_uuid: m-c84f4f5e4f284023a60a916ba65dbf51
 prompts: null
-run_id: 9374fbbd79154a4ab40be892c31d1526
-utc_time_created: '2026-05-13 02:50:34.648428'
+run_id: 5c749c715a4548f0aa9925c71ff49bb9
+utc_time_created: '2026-05-25 02:56:20.375255'
