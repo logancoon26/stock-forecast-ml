@@ -33,8 +33,8 @@ The two custom models are evaluated against classical ML baselines:
 | SVM | Baseline |
 | Random Forest | Baseline |
 | XGBoost | Baseline |
-| Hybrid CNN | ✅ Custom |
-| Transformer | ✅ Custom |
+| Hybrid CNN | Custom |
+| Transformer | Custom |
 
 Full results and analysis: [`notebooks/model_result_comparison.ipynb`](notebooks/model_result_comparison.ipynb)
 
@@ -141,11 +141,11 @@ MLflow is used to track all training runs, log metrics, and save model artifacts
 ## Project Structure
 
 ```
-StockML/
+Stock-Forecast-ML/
 ├── train_hybrid.py              # Train the Hybrid CNN model
 ├── predict_hybrid.py            # Run inference with Hybrid CNN
 ├── notebooks/
-│   └── model_result_comparison.ipynb  # Benchmark results
+│   └── model_result_comparison.ipynb  # Benchmark vs. custom results
 ├── src/
 │   └── data/                    # Files for loading, preprocessing data
 │   └── models/                  # Files for building/training models
