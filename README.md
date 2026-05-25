@@ -156,6 +156,6 @@ Stock-Forecast-ML/
 
 ---
 
-## Author
+## Author Note
 
 Built as a portfolio project to demonstrate applied machine learning engineering skills including custom architecture design, experiment tracking, and cloud deployment.
